@@ -59,6 +59,18 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
 .faq p{margin:0;padding:0 20px 18px;font-size:17px;line-height:1.5;color:#4A3A2A}
 .act{position:relative;border:3px solid #231710;border-radius:16px;box-shadow:5px 5px 0 #231710;padding:18px;display:flex;flex-direction:column;gap:6px;min-height:150px;box-sizing:border-box}
 @media (max-width: 720px){.navx{display:none}}
+.fpill{font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;border:2px solid #231710;background:#FFF6DC}
+.fpill.on{background:#231710;color:#FFF6DC}
+.fcard{background:#FFF6DC;border:2px solid #231710;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:7px;position:relative}
+.fcard .ft{font-family:'Alfa Slab One',serif;font-size:19px;line-height:1.1}
+.fcard .fm{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:#6B5642}
+.fcard .fh{display:flex;align-items:center;gap:9px}
+.fcard .fa{width:34px;height:34px;border-radius:50%;border:2px solid #231710;display:flex;align-items:center;justify-content:center;font-family:'Alfa Slab One',serif;font-size:14px;flex:none}
+.fcard .fq{font-family:'Caveat',cursive;font-weight:700;font-size:19px;line-height:1.05}
+.fcard .fs2{font-size:12px;color:#6B5642}
+.fcard .fb{display:flex;gap:6px;flex-wrap:wrap}
+.fcard .fb span{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;border:1.5px solid #231710}
+.fcard .ftag{position:absolute;top:-10px;right:10px;background:#E88CA5;border:2px solid #231710;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;padding:2px 8px;border-radius:6px}
 .act .af{margin-top:auto;padding-top:8px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
 .act .fave{display:none;position:absolute;top:-13px;right:12px;background:#231710;color:#F7D56B;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;padding:4px 9px;border-radius:999px;transform:rotate(3deg)}
 .act.on .fave{display:block}
@@ -164,6 +176,24 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
         <span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em">CONCEPT SCREENS · FOR NOW WE RUN ON TELEGRAM</span>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: flex-start">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+          <div style="width: 312px; height: 675px; border: 8px solid #231710; border-radius: 40px; box-shadow: 8px 8px 0 #231710; overflow: hidden; box-sizing: content-box; background: #F3E6C8">
+            <div style="width: 390px; height: 844px; transform: scale(0.8); transform-origin: top left">
+              <div style="width: 390px; height: 844px; background: #F3E6C8; color: #231710; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden">
+              <div style="padding: 22px 20px 0; display: flex; flex-direction: column; gap: 10px">
+                <span style="font-family: 'Alfa Slab One', serif; font-size: 32px">Find a game</span>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap">
+                  <span class="fpill on">Weeknights</span><span class="fpill on" id="find-area">Near Bishan</span><span class="fpill">Any level</span>
+                </div>
+                <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B5642">3 GAMES FIT YOU</span>
+              </div>
+              <div id="find" style="flex: 1 1 0; min-height: 0; padding: 12px 20px 0; display: flex; flex-direction: column; gap: 12px"></div>
+              <div style="padding: 12px 20px 22px; text-align: center; font-family: 'Caveat', cursive; font-weight: 700; font-size: 22px; color: #6B5642">pick one. it's yours each week.</div>
+            </div>
+            </div>
+          </div>
+          <span style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px">Find a game</span>
+        </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
           <div style="width: 312px; height: 675px; border: 8px solid #231710; border-radius: 40px; box-shadow: 8px 8px 0 #231710; overflow: hidden; box-sizing: content-box; background: #F3E6C8">
             <div style="width: 390px; height: 844px; transform: scale(0.8); transform-origin: top left">
@@ -473,6 +503,7 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
         <details class="faq"><summary>How do I get into a game?</summary><p>Tell us your thing, your nights and your area. We show two or three games that fit. Pick one, and it’s yours each week.</p></details>
         <details class="faq"><summary>Do I have to come every week?</summary><p>No. Your usual spot is held, and you tap “can’t make this one” when you’re out. A core of regulars forms on its own, and new people join any week.</p></details>
         <details class="faq"><summary>Can I come alone?</summary><p>Most people do. The host says hi, gets you into the first game, and introduces you around. Nobody has to break the ice from zero.</p></details>
+        <details class="faq"><summary>Is it safe to come alone?</summary><p>Every host has an intro call and an ID check before their first game. Games happen in public places: courts, community halls, parks, hawker centres. There are women-led and women-only games, hosts can remove anyone, and you can flag anything privately.</p></details>
         <details class="faq"><summary>What if I’m not very good?</summary><p>Levels are mixed on purpose. The host rotates partners so games stay fair and nobody sits out all night.</p></details>
         <details class="faq"><summary>How much is it?</summary><p>About your share of the court, plus a small cut for the host who runs it. Food after is pay-your-own and optional (but don’t skip it).</p></details>
         <details class="faq"><summary>Is this a dating app?</summary><p>No. No swiping, no profiles. A game, a small group, food after.</p></details>
@@ -574,6 +605,8 @@ var C={
 var ACTS={"sg": {"intro": "Weeknights once the heat breaks, weekend mornings before it starts. Courts, CC halls, void decks, the park connector.", "acts": [["SPORT", "Doubles tennis", "ActiveSG courts, two pairs, rotate partners.", "kopi after"], ["SPORT", "Badminton", "CC hall, four courts, keep score badly.", "supper after"], ["PLAY", "Void-deck mahjong", "A teach-the-newbie table, every week.", "kopi after"], ["MOVE", "MacRitchie hike crew", "Saturday 7am, before the heat. Same loop, every season.", "prata after"], ["MOVE", "Dragon boat crew", "Same boat, same seat, Saturday mornings at Kallang.", "breakfast after"], ["MAKE", "Hawker cook-along", "One hawker classic a week. Then you eat it together.", "you cooked the after"]]}, "bay": {"intro": "Weekend mornings outside, weeknights in the gym. Parks, trails, public courts, fog permitting.", "acts": [["SPORT", "Pickleball", "Park courts, open play, everyone rotates in.", "tacos after"], ["SPORT", "Doubles tennis", "Public courts, two pairs, sunset slot.", "tacos after"], ["MOVE", "Trail hike crew", "Same trailhead every Saturday. Redwoods, ridgelines, small talk.", "burritos after"], ["MOVE", "Climbing gym crew", "Bouldering after work. Spot each other, share beta.", "ramen after"], ["MAKE", "Farmers market cook-along", "Shop the market together, cook one thing, eat it.", "you cooked the after"], ["PLAY", "Board game night", "Co-op games, so nobody loses alone.", "pizza after"]]}, "ldn": {"intro": "Weeknights in the park while it’s light, the pub when it isn’t. Council courts, lidos, back rooms.", "acts": [["PLAY", "Pub quiz team", "Same table, same terrible team name.", "already at the pub"], ["MOVE", "Park run club", "Saturday 5k in the park at chatting pace.", "café after"], ["SPORT", "Five-a-side", "Weeknight cage football, mixed levels, rolling subs.", "a pint after"], ["MOVE", "Lido crew", "Cold water, same lane, every week. Brave together.", "tea and a bacon roll"], ["MAKE", "Sunday roast club", "Take turns cooking a roast for the group.", "you cooked the after"], ["SING", "Community choir", "No auditions. Same songs until they’re good.", "a pint after"]]}};
 var PAL=[['#2C6E5B','#FFF6DC'],['#F2C14E','#231710'],['#2D5FA3','#FFF6DC'],['#C73A24','#FFF6DC'],['#E88CA5','#231710'],['#6B4580','#FFF6DC'],['#FFF6DC','#231710']];
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+var FIND={"sg": [["Tuesday doubles", "TUE 7:30 PM · BISHAN", "12 MIN", "W", "Wei", "Season 3", "I'll teach you the scoring, badly.", "Mixed · 8 regulars", "2 spots", "#2C6E5B", ""], ["Women's badminton", "THU 8:00 PM · TOA PAYOH CC", "15 MIN", "A", "Aisha", "Season 1", "Women-led, all levels.", "Women only", "3 spots", "#E88CA5", "WOMEN-LED"], ["Void-deck mahjong", "WED 8:00 PM · ANG MO KIO", "18 MIN", "B", "Ben", "Season 2", "I'll teach you the tiles.", "Mixed · 4 regulars", "1 spot", "#C73A24", ""]], "bay": [["Pickleball open play", "SAT 9:00 AM · MISSION COURTS", "10 MIN", "D", "Dan", "Season 2", "Bring nothing, I've got paddles.", "Mixed · 8 regulars", "2 spots", "#F2C14E", ""], ["Women's trail crew", "SUN 8:00 AM · TRAILHEAD", "25 MIN", "M", "Mei", "Season 1", "Women-led, chatty pace.", "Women only", "4 spots", "#E88CA5", "WOMEN-LED"], ["Climbing gym crew", "WED 7:00 PM · DOGPATCH", "14 MIN", "S", "Sam", "Season 2", "First-timers welcome, I'll spot you.", "Mixed · 6 regulars", "3 spots", "#6B4580", ""]], "ldn": [["Pub quiz team", "TUE 7:30 PM · CAMDEN", "9 MIN", "P", "Priya", "Season 3", "We have never won. Join us.", "Mixed · 6 regulars", "2 spots", "#2D5FA3", ""], ["Women's five-a-side", "THU 7:00 PM · HACKNEY", "20 MIN", "A", "Aisha", "Season 1", "Women-led, rusty is fine.", "Women only", "3 spots", "#E88CA5", "WOMEN-LED"], ["Park run club", "SAT 9:00 AM · REGENT’S PARK", "12 MIN", "B", "Ben", "Season 2", "Chatting pace, café after.", "Mixed · 10 regulars", "5 spots", "#2C6E5B", ""]]};
+var AREA={sg:"Near Bishan",bay:"Near the Mission",ldn:"Near Camden"};
 function svg(name,w,h,stroke,sw){return '<svg viewBox="0 0 64 64" width="'+w+'" height="'+h+'" fill="none" stroke="'+stroke+'" stroke-width="'+sw+'" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+I[name]+'</svg>';}
 function $(id){return document.getElementById(id);}
 function set(key){
@@ -588,6 +621,8 @@ function set(key){
     if(s.getAttribute('width')){s.setAttribute('width','40');s.setAttribute('height','40');}
   });
   $('night-city').textContent=c.city;
+  $('find-area').textContent=AREA[key];
+  $('find').innerHTML=FIND[key].map(function(g){return '<div class="fcard">'+(g[10]?'<span class="ftag">'+g[10]+'</span>':'')+'<span class="ft">'+esc(g[0])+'</span><span class="fm">'+esc(g[1])+' · '+g[2]+'</span><div class="fh"><span class="fa" style="background:'+g[9]+'">'+g[3]+'</span><div style="display:flex;flex-direction:column"><span class="fq">\u201c'+esc(g[6])+'\u201d</span><span class="fs2">Hosted by '+esc(g[4])+' · '+g[5]+'</span></div></div><div class="fb"><span>'+esc(g[7])+'</span><span style="background:#F2C14E">'+g[8]+'</span></div></div>';}).join('');
   var A=ACTS[key]; $('acts-intro').textContent=A.intro;
   $('acts').innerHTML=A.acts.map(function(a,i){var p=PAL[i%PAL.length];return '<div class="act" style="background:'+p[0]+';color:'+p[1]+'"><span style="font-family:\'DM Mono\',monospace;font-size:11px;letter-spacing:.14em;opacity:.8">'+esc(a[0])+'</span><span style="font-family:\'Alfa Slab One\',serif;font-size:22px;line-height:1.1">'+esc(a[1])+'</span><span style="font-size:15px;line-height:1.4;opacity:.9">'+esc(a[2])+'</span><span class="af">&rarr; '+esc(a[3])+'</span></div>';}).join('')+'<a href="host.html" class="act" style="background:transparent;color:#231710;border-style:dashed;text-decoration:none;justify-content:center"><span style="font-family:\'DM Mono\',monospace;font-size:11px;letter-spacing:.14em;color:#6B5642">YOUR IDEA</span><span style="font-family:\'Alfa Slab One\',serif;font-size:22px;line-height:1.1">Something else?</span><span style="font-size:15px;color:#C73A24;font-weight:700">Host it &rarr;</span></a>';
   var g=$('h-game'), cur=g.value; g.innerHTML=A.acts.map(function(a){return '<option>'+esc(a[1])+'</option>';}).join('')+'<option>Something else</option>';
