@@ -13,9 +13,12 @@
   // Random, sticky split: each visitor sees one variant and keeps seeing it.
   var V={ritual:'index.html',rookies:'rookies.html',hello:'hello.html'};
   var keys=Object.keys(V), k=null;
-  try{ k=localStorage.getItem('kakis_variant'); }catch(e){}
+  var qs=new URLSearchParams(location.search);
+  if(qs.has('reset')){ try{ localStorage.removeItem('kakis_variant'); }catch(e){} }
+  if(V[qs.get('force')]){ k=qs.get('force'); }
+  else { try{ k=localStorage.getItem('kakis_variant'); }catch(e){} }
   if(!V[k]){ k=keys[Math.floor(Math.random()*keys.length)]; try{ localStorage.setItem('kakis_variant',k); }catch(e){} }
-  var q=location.search ? location.search.slice(1)+'&' : '';
+  var q='';
   location.replace(V[k]+'?'+q+'v='+k);
 })();
 </script>
