@@ -647,6 +647,8 @@ $('chit-send').addEventListener('click',function(){
 });
 $('h-city').addEventListener('change',function(){ if(C[this.value]) set(this.value); });
 var q; try{q=new URLSearchParams(location.search).get('city');}catch(e){}
+var tv; try{tv=new URLSearchParams(location.search).get('v');}catch(e){}
+if(tv){ q='sg'; var g=document.querySelector('[aria-label="Pick your city"]'); if(g) g.style.display='none'; }
 set(C[q]?q:'sg');
 })();
 </script>
