@@ -11,7 +11,7 @@
 <script>
 (function(){
   // Random, sticky split: each visitor sees one variant and keeps seeing it.
-  var V={ritual:'index.html',rookies:'rookies.html',hello:'hello.html'};
+  var V={ritual:'index.html',rookies:'rookies.html',table:'table.html'};
   var keys=Object.keys(V), k=null;
   var qs=new URLSearchParams(location.search);
   if(qs.has('reset')){ try{ localStorage.removeItem('kakis_variant'); }catch(e){} }
