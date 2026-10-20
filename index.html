@@ -641,7 +641,7 @@ var SHEET_URL=''; // paste your Google Apps Script web-app URL here
 $('chit-send').addEventListener('click',function(){
   var n=$('chit-note'); n.hidden=false;
   if(!SHEET_URL){n.textContent="Sign-ups open soon. This chit doesn't send anything yet.";return;}
-  var d=new URLSearchParams({name:$('h-name').value,city:$('h-city').value,role:$('h-role').value,game:$('h-game').value,area:$('h-area').value,ts:new Date().toISOString()});
+  var d=new URLSearchParams({variant:'ritual',name:$('h-name').value,city:$('h-city').value,role:$('h-role').value,game:$('h-game').value,area:$('h-area').value,ts:new Date().toISOString()});
   n.textContent='Sending...';
   fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:d}).then(function(){n.textContent="You're on the list. See you on court.";}).catch(function(){n.textContent='Hmm, that didn\u2019t send. Try again?';});
 });

@@ -1,10 +1,13 @@
-# Kakis
+# Kakis experiments
 
-**Same court. Same time. Same kakis.**
+Three landing pages, each testing a different idea about what turns strangers into friends.
 
-Landing page for Kakis Athletic & Social Club: weekly small-group games, something good to eat after.
-*kaki (n.): Singlish for the friend you always do things with.*
+| Page | Hypothesis | Link |
+|---|---|---|
+| **Kakis** (ritual) | Repeated, low-pressure contact: same people, same time, every week | https://jinsyl123.github.io/kakis/ |
+| **Rookies** (shared challenge) | Being beginners together, with a finish line, bonds people faster | https://jinsyl123.github.io/kakis/rookies.html |
+| **Hello Again** (AI bridge) | Groups make acquaintances; small nudges turn them into friends | https://jinsyl123.github.io/kakis/hello.html |
 
-Live: https://jinsyl123.github.io/kakis/ · Try `?city=bay` or `?city=ldn`.
+**Split link for recruiting:** https://jinsyl123.github.io/kakis/try.html sends each visitor to one page at random (and keeps them there). Every form records which page the sign-up came from (`variant`).
 
-Photos from [Pexels](https://www.pexels.com).
+Host page: https://jinsyl123.github.io/kakis/host.html · Photos from [Pexels](https://www.pexels.com).

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rookies — six weeks, zero to finish line</title>
+<meta name="description" content="Join a crew of beginners. Six weeks of learning something from zero together, a finish line at the end, food after every session.">
+<meta property="og:title" content="Rookies — six weeks, zero to finish line">
+<meta property="og:description" content="Nobody here knows what they're doing yet. That's the point.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230F1C3F'/%3E%3Crect x='5' y='7' width='22' height='18' rx='2' fill='%23F2F4F7'/%3E%3Crect x='5' y='7' width='22' height='5' fill='%23D9432B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Barlow+Condensed:wght@500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --chalk:#F2F4F7;   /* gym-wall white */
+  --navy:#0F1C3F;    /* kit navy */
+  --track:#D9432B;   /* track rubber red */
+  --lane:#2FB8B3;    /* pool lane aqua */
+  --tape:#FFD23F;    /* athletic tape yellow */
+  --mute:#4B587A;
+  --line:#C9D0DC;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--chalk);color:var(--navy);font-family:'Barlow',system-ui,sans-serif;font-size:18px;line-height:1.5}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--tape);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.display{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.005em;line-height:.95;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-decoration:none;border:none;cursor:pointer;border-radius:4px}
+.btn-red{background:var(--track);color:#fff}
+.btn-red:hover{background:#c13520}
+.btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* ---------- nav ---------- */
+.nav{position:absolute;inset:0 0 auto 0;z-index:5}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:'Anton',sans-serif;font-size:28px;letter-spacing:.02em}
+.logo svg{flex:none}
+.nav-links{display:flex;gap:24px;align-items:center;color:#fff;font-weight:600;font-size:16px}
+.nav-links a{text-decoration:none}
+.nav-links .btn{min-height:44px;font-size:18px;padding:0 18px}
+@media (max-width:720px){.nav-links .nx{display:none}}
+
+/* ---------- hero: lanes + bib ---------- */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;padding:120px 0 96px}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(180deg,transparent 0 118px,rgba(47,184,179,.35) 118px 121px);pointer-events:none}
+.hero::after{content:"";position:absolute;right:-10%;bottom:-2px;width:70%;height:10px;background:repeating-linear-gradient(90deg,#fff 0 28px,var(--navy) 28px 56px);opacity:.9}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(56px,8.4vw,128px);text-transform:none}
+.hero p{max-width:30ch;font-size:clamp(20px,2.1vw,24px);color:#D7DDEA;margin:28px 0 36px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero .btn-ghost{color:#fff}
+.bib{position:relative;justify-self:center;width:min(100%,400px);aspect-ratio:4/3.4;background:#fff;color:var(--navy);border-radius:10px;transform:rotate(-5deg);box-shadow:0 30px 60px rgba(0,0,0,.35);display:flex;flex-direction:column;overflow:hidden}
+.bib .band{background:var(--track);color:#fff;font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.06em;text-align:center;padding:12px 0 10px}
+.bib .num{flex:1;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:clamp(120px,15vw,190px);line-height:1;letter-spacing:-.01em}
+.bib .foot{display:flex;justify-content:space-between;padding:0 42px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:18px;color:var(--mute)}
+.pin{position:absolute;width:16px;height:16px;border-radius:50%;background:var(--chalk);box-shadow:inset 0 0 0 3px #B7C0CF}
+.bib .pin:nth-of-type(1){left:14px;top:70px}.bib .pin:nth-of-type(2){right:14px;top:70px}
+.bib .pin:nth-of-type(3){left:14px;bottom:14px}.bib .pin:nth-of-type(4){right:14px;bottom:14px}
+.safety{position:absolute;left:-26px;top:58px;width:70px;height:18px;border:3px solid #9AA6BA;border-radius:9px;transform:rotate(-30deg);background:transparent}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.bib{width:min(86%,340px)}}
+
+/* ---------- start list ---------- */
+.section{padding:clamp(72px,9vw,120px) 0}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 40px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(44px,6vw,84px)}
+.sec-head p{max-width:42ch;margin:0;color:var(--mute);font-size:19px}
+.startlist{border-top:4px solid var(--navy)}
+.row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr) auto;gap:24px;align-items:center;padding:22px 0;border-bottom:2px solid var(--line)}
+.row h3{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(30px,3.4vw,44px);line-height:1;margin:0}
+.row .from,.row .to{font-size:17px;line-height:1.35}
+.row .from b,.row .to b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--mute);letter-spacing:.04em}
+.row .to b{color:var(--track)}
+.row .after{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:17px;background:var(--tape);padding:6px 12px;border-radius:3px;white-space:nowrap;transform:rotate(-2deg)}
+@media (max-width:760px){.row{grid-template-columns:1fr 1fr;row-gap:10px}.row h3{grid-column:1/-1}.row .after{justify-self:start}}
+
+/* ---------- photo strip ---------- */
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--navy)}
+.strip figure{margin:0;position:relative}
+.strip img{width:100%;aspect-ratio:9/6.4;object-fit:cover}
+.strip figcaption{position:absolute;left:16px;bottom:14px;background:var(--chalk);color:var(--navy);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;padding:4px 10px}
+@media (max-width:760px){.strip{grid-template-columns:1fr}}
+
+/* ---------- whiteboard ---------- */
+.board{background:#fff;border:10px solid #D5DAE3;border-radius:8px;box-shadow:inset 0 0 0 1px #E8ECF2, 0 20px 40px rgba(15,28,63,.12);padding:28px 24px 34px;position:relative}
+.board::after{content:"";position:absolute;left:12%;right:12%;bottom:-24px;height:14px;background:#C3CAD6;border-radius:0 0 6px 6px}
+.weeks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;position:relative}
+.wk{padding:0 14px;border-left:2px dashed #DCE1E9;min-height:180px}
+.wk:first-child{border-left:none}
+.wk .n{font-family:'Anton',sans-serif;font-size:52px;line-height:1;color:var(--navy)}
+.wk .note{font-family:'Permanent Marker',cursive;font-size:21px;line-height:1.2;margin-top:10px;color:#1F3A8A}
+.wk:nth-child(4) .note{color:var(--track)}
+.wk:last-child .note{color:#0E7C78}
+.progress{height:10px;margin:22px 14px 0;background:repeating-linear-gradient(90deg,var(--track) 0 22px,transparent 22px 30px);border-radius:5px}
+@media (max-width:860px){.weeks{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}.wk{border-left:none;border-top:2px dashed #DCE1E9;padding-top:12px;min-height:0}}
+
+/* ---------- clipboard (AI co-pilot) ---------- */
+.copilot{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.copilot h2{font-size:clamp(44px,5.6vw,80px)}
+.copilot p{color:var(--mute);font-size:19px;max-width:40ch}
+.clip{position:relative;background:#B98A55;border-radius:14px;padding:40px 22px 22px;box-shadow:0 24px 50px rgba(15,28,63,.22);transform:rotate(1.5deg)}
+.clip::before{content:"";position:absolute;left:50%;top:-14px;width:150px;height:40px;margin-left:-75px;background:linear-gradient(#C7CCD6,#8E96A6);border-radius:8px 8px 4px 4px}
+.sheet{background:#fff;border-radius:4px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:14px}
+.sheet h3{margin:0;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;line-height:1.1}
+.sheet .sub{color:var(--mute);font-size:15px;margin-top:-8px}
+.stat{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid #E3E7EE;padding-bottom:12px}
+.stat .big{font-family:'Anton',sans-serif;font-size:44px;line-height:1}
+.bar{flex:1;height:12px;background:#E9EDF3;border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--lane)}
+.logline{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16px;line-height:1.4}
+.logline svg{margin-top:3px}
+.draft{background:#FFF7D1;border-left:4px solid var(--tape);padding:10px 12px;font-size:15px}
+.draft em{font-style:normal;font-weight:600}
+.tag{align-self:flex-start;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;color:#0E7C78}
+@media (max-width:860px){.copilot{grid-template-columns:1fr}}
+
+/* ---------- after ---------- */
+.after-band{background:var(--lane);color:var(--navy)}
+.after-band .wrap{display:flex;flex-wrap:wrap;gap:16px 48px;align-items:center;justify-content:space-between;padding-top:56px;padding-bottom:56px}
+.after-band h2{font-size:clamp(36px,4.6vw,64px);max-width:16ch}
+.after-band p{max-width:44ch;margin:0;font-size:20px}
+
+/* ---------- faq ---------- */
+.faq-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px}
+.faq-grid h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:25px;margin:0 0 6px;line-height:1.15}
+.faq-grid p{margin:0;color:var(--mute);font-size:17px}
+@media (max-width:760px){.faq-grid{grid-template-columns:1fr}}
+
+/* ---------- sign-up sheet ---------- */
+.signup{background:var(--navy);color:#fff}
+.signup .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start;padding-top:clamp(72px,9vw,120px);padding-bottom:clamp(72px,9vw,120px)}
+.signup h2{font-size:clamp(48px,6.4vw,92px)}
+.signup p{color:#C9D1E3;font-size:19px;max-width:36ch}
+.form{background:#fff;color:var(--navy);border-radius:4px;padding:28px;display:grid;gap:18px;box-shadow:12px 12px 0 var(--track)}
+.form h3{margin:0;font-family:'Anton',sans-serif;font-weight:400;font-size:34px;line-height:1}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px}
+.field input,.field select{min-height:50px;border:2px solid var(--line);border-radius:4px;padding:0 12px;font:inherit;font-size:18px;color:var(--navy);background:#fff}
+.field input:focus,.field select:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px var(--tape)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.note{margin:0;font-size:16px;color:var(--track);font-weight:600}
+@media (max-width:860px){.signup .wrap{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+
+footer{background:#0A142E;color:#9AA6C2;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:24px;padding-bottom:24px}
+footer a{color:var(--tape)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Rookies home">
+      <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><rect x="1" y="1" width="32" height="26" rx="3" fill="#F2F4F7"/><rect x="1" y="1" width="32" height="7" fill="#D9432B"/><circle cx="5.5" cy="12" r="1.6" fill="#0F1C3F"/><circle cx="28.5" cy="12" r="1.6" fill="#0F1C3F"/></svg>
+      Rookies
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="nx" href="#challenges">Challenges</a>
+      <a class="nx" href="#season">The six weeks</a>
+      <a class="nx" href="#faq">Questions</a>
+      <a class="btn btn-red" href="#join">Join a crew</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 class="display">Nobody here knows what they're doing yet.</h1>
+        <p>Six weeks. A crew of beginners. One finish line at the end, and food after every session.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-red" href="#join">Join a crew</a>
+          <a class="btn btn-ghost" href="#challenges">See the challenges</a>
+        </div>
+      </div>
+      <div class="bib" role="img" aria-label="A race bib reading Rookies, number 001">
+        <span class="pin"></span><span class="pin"></span><span class="pin"></span><span class="pin"></span>
+        <div class="band">ROOKIES</div>
+        <div class="num">001</div>
+        <div class="foot"><span>Crew of 10</span><span>Week 1 of 6</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="challenges">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Pick a finish line.</h2>
+        <p>Every crew starts at zero and has a coach, ten people, one session a week and a real finale in week six.</p>
+      </div>
+      <div class="startlist">
+        <div class="row"><h3>Dragon boat</h3><div class="from"><b>Week 1</b>Can't hold the paddle right.</div><div class="to"><b>Week 6</b>Race day against other crews.</div><span class="after">Breakfast after</span></div>
+        <div class="row"><h3>Couch to 10K</h3><div class="from"><b>Week 1</b>Run a bit, walk a lot.</div><div class="to"><b>Week 6</b>Run 10K together, all the way.</div><span class="after">Prata after</span></div>
+        <div class="row"><h3>Cook a feast</h3><div class="from"><b>Week 1</b>Learn to hold a knife properly.</div><div class="to"><b>Week 6</b>Your crew cooks ten dishes for your friends.</div><span class="after">You eat it</span></div>
+        <div class="row"><h3>Bouldering</h3><div class="from"><b>Week 1</b>The easy wall, slowly.</div><div class="to"><b>Week 6</b>Everyone sends their project.</div><span class="after">Supper after</span></div>
+        <div class="row"><h3>Mahjong</h3><div class="from"><b>Week 1</b>What's a pong?</div><div class="to"><b>Week 6</b>Crew tournament, bragging rights.</div><span class="after">Kopi after</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip" aria-label="Crews in progress">
+    <figure><img src="photos/rk-boat.jpg" alt="A dragon boat crew paddling together" loading="lazy"><figcaption>Week 5, dragon boat</figcaption></figure>
+    <figure><img src="photos/rk-run.jpg" alt="A group running together across a bridge" loading="lazy"><figcaption>Week 3, couch to 10K</figcaption></figure>
+    <figure><img src="photos/rk-cook.jpg" alt="Two people cooking together at a stove" loading="lazy"><figcaption>Week 2, cook a feast</figcaption></figure>
+  </div>
+
+  <section class="section" id="season">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display">Six weeks, roughly.</h2>
+        <p>Being bad at something together is the fastest way we know to stop being strangers.</p>
+      </div>
+      <div class="board">
+        <div class="weeks">
+          <div class="wk"><div class="n">1</div><div class="note">Everyone's bad. Good.</div></div>
+          <div class="wk"><div class="n">2</div><div class="note">First small win.</div></div>
+          <div class="wk"><div class="n">3</div><div class="note">Names stick. Jokes start.</div></div>
+          <div class="wk"><div class="n">4</div><div class="note">The hard week. Show up anyway.</div></div>
+          <div class="wk"><div class="n">5</div><div class="note">Dress rehearsal.</div></div>
+          <div class="wk"><div class="n">6</div><div class="note">Finish line. Then a feast.</div></div>
+        </div>
+        <div class="progress" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap copilot">
+      <div>
+        <h2 class="display">Your coach has a co-pilot.</h2>
+        <p>AI keeps the training log, plans next week from how this week went, and notices who's slipping before they drop out. The coach gets to just coach.</p>
+      </div>
+      <div class="clip">
+        <div class="sheet">
+          <h3>Kallang Paddlers, week 3</h3>
+          <div class="sub">Dragon boat crew, coached by Rachel</div>
+          <div class="stat"><span class="big">9/10</span><div class="bar" aria-hidden="true"><i style="width:90%"></i></div><span>turned up</span></div>
+          <div class="logline"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#2FB8B3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Timing improved. The crew held the stroke for a full minute.</span></div>
+          <div class="logline"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" fill="none" stroke="#D9432B" stroke-width="2.4"/><path d="M9 5v5" stroke="#D9432B" stroke-width="2.4" stroke-linecap="round"/></svg><span>Starts are still messy. Next week opens with fifteen minutes on starts.</span></div>
+          <div class="logline"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7" fill="none" stroke="#0F1C3F" stroke-width="2.4"/><path d="M6 9h6" stroke="#0F1C3F" stroke-width="2.4" stroke-linecap="round"/></svg><span>Mei missed two sessions.</span></div>
+          <div class="draft">Draft for Rachel: <em>"Hey Mei, the boat's a bit lopsided without you. Saturday, same time?"</em></div>
+          <span class="tag">Concept screen</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="after-band">
+    <div class="wrap">
+      <h2 class="display">Crossed the line? Keep the crew.</h2>
+      <p>Most crews don't want to stop. Pick a new challenge together, or turn into a weekly game with the same people.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="display">Fair questions.</h2></div>
+      <div class="faq-grid">
+        <div><h3>I've never done this. Is that okay?</h3><p>That's the only requirement. Every crew starts at zero, so nobody is the worst for long.</p></div>
+        <div><h3>Can I come alone?</h3><p>Most people do. You can also sign up with a friend and join the same crew.</p></div>
+        <div><h3>What if I miss a week?</h3><p>You get a short catch-up from the coach, and the crew saves your seat. Six weeks is short enough to stay with it.</p></div>
+        <div><h3>How much is it?</h3><p>One price for the six weeks, covering the coach and the venue. Food after is pay-your-own.</p></div>
+        <div><h3>What happens after the finale?</h3><p>Pick another challenge with your crew, or keep meeting weekly. Either way, you keep the people.</p></div>
+        <div><h3>Who are the coaches?</h3><p>People who are good at the thing and patient with beginners. Every coach is vetted, and every session is in a public place.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signup" id="join">
+    <div class="wrap">
+      <div>
+        <h2 class="display">Start at zero with us.</h2>
+        <p>The first crews start in Singapore. Pick a challenge and a night, and we'll put you in a crew of ten.</p>
+      </div>
+      <form class="form" onsubmit="return false" aria-labelledby="form-title">
+        <h3 id="form-title">Crew sign-up</h3>
+        <div class="field"><label for="r-name">Your name</label><input id="r-name" autocomplete="given-name" placeholder="Alex"></div>
+        <div class="field"><label for="r-contact">Telegram or email</label><input id="r-contact" placeholder="@alex"></div>
+        <div class="field"><label for="r-challenge">Challenge</label><select id="r-challenge"><option>Dragon boat</option><option>Couch to 10K</option><option>Cook a feast</option><option>Bouldering</option><option>Mahjong</option><option>Something else</option></select></div>
+        <div class="two">
+          <div class="field"><label for="r-night">Best time</label><select id="r-night"><option>Weeknight evening</option><option>Saturday morning</option><option>Sunday morning</option></select></div>
+          <div class="field"><label for="r-area">Nearest MRT</label><input id="r-area" placeholder="Bishan"></div>
+        </div>
+        <div class="field"><label for="r-friend">Coming with a friend?</label><select id="r-friend"><option>Just me</option><option>Yes, with one friend</option></select></div>
+        <button class="btn btn-red" type="button" id="r-send">Join a crew</button>
+        <p class="note" id="r-note" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Rookies · an experiment by the Kakis team, Singapore</span><span>Photos from <a href="https://www.pexels.com">Pexels</a></span></div>
+</footer>
+
+<script>
+(function(){
+  var SHEET_URL=''; // paste the Google Apps Script web-app URL here
+  function $(i){return document.getElementById(i);}
+  $('r-send').addEventListener('click',function(){
+    var n=$('r-note'); n.hidden=false;
+    if(!SHEET_URL){n.textContent="Sign-ups open soon. This form doesn't send anything yet.";return;}
+    var d=new URLSearchParams({variant:'rookies',name:$('r-name').value,contact:$('r-contact').value,thing:$('r-challenge').value,night:$('r-night').value,area:$('r-area').value,friend:$('r-friend').value,ts:new Date().toISOString()});
+    n.textContent='Sending...';
+    fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:d}).then(function(){n.textContent="You're on the crew list. We'll message you when yours forms.";}).catch(function(){n.textContent="That didn't send. Check your connection and try again.";});
+  });
+})();
+</script>
+</body>
+</html>
