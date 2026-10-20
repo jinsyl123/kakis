@@ -71,6 +71,13 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
 .fcard .fb{display:flex;gap:6px;flex-wrap:wrap}
 .fcard .fb span{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;border:1.5px solid #231710}
 .fcard .ftag{position:absolute;top:-10px;right:10px;background:#E88CA5;border:2px solid #231710;font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.1em;padding:2px 8px;border-radius:6px}
+.how3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.hstep{background:#FFF6DC;border:3px solid #231710;border-radius:18px;box-shadow:6px 6px 0 #231710;padding:22px 22px 24px;position:relative}
+.hstep .hn{position:absolute;top:-18px;left:18px;width:40px;height:40px;border-radius:50%;background:#C73A24;color:#FFF6DC;border:3px solid #231710;display:flex;align-items:center;justify-content:center;font-family:'Alfa Slab One',serif;font-size:18px}
+.hstep h3{margin:12px 0 6px;font-family:'Alfa Slab One',serif;font-weight:400;font-size:26px;line-height:1.1}
+.hstep p{margin:0;font-size:17px;line-height:1.45;color:#4A3A2A}
+.howfoot{margin:26px 0 0;text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#6B5642}
+@media (max-width:820px){.how3{grid-template-columns:1fr;row-gap:34px}}
 .act .af{margin-top:auto;padding-top:8px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
 .act .fave{display:none;position:absolute;top:-13px;right:12px;background:#231710;color:#F7D56B;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;padding:4px 9px;border-radius:999px;transform:rotate(3deg)}
 .act.on .fave{display:block}
@@ -94,7 +101,7 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
       <span style="font-family: 'Alfa Slab One', serif; font-size: 30px">kakis</span>
     </a>
     <nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 26px; align-items: center; font-weight: 700; font-size: 16px">
-            <a href="#night" class="navx" style="color: #231710; text-decoration: none">How it works</a>
+            <a href="#how" class="navx" style="color: #231710; text-decoration: none">How it works</a>
       <a href="#app" class="navx" style="color: #231710; text-decoration: none">The app</a>
       <a href="#things" class="navx" style="color: #231710; text-decoration: none">Activities</a>
       <a href="host.html" style="color: #231710; text-decoration: none; background: #FFF6DC; padding: 8px 16px; border-radius: 10px; border: 2px solid #231710; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Host a night</a>
@@ -133,7 +140,7 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
 
     <div style="display: flex; flex-wrap: wrap; gap: 16px 20px; justify-content: center; align-items: center; margin-top: 84px">
       <a href="#join" style="background: #F2C14E; color: #231710; text-decoration: none; font-weight: 700; font-size: 18px; padding: 15px 30px; border-radius: 12px; border: 3px solid #231710; min-height: 54px; box-sizing: border-box; display: inline-flex; align-items: center; box-shadow: 5px 5px 0 #231710">Get on the list</a>
-      <a href="#night" style="background: #FFF6DC; color: #231710; text-decoration: none; font-weight: 700; font-size: 18px; padding: 15px 30px; border-radius: 12px; border: 3px solid #231710; min-height: 54px; box-sizing: border-box; display: inline-flex; align-items: center; box-shadow: 5px 5px 0 #231710">See how it works</a>
+      <a href="#how" style="background: #FFF6DC; color: #231710; text-decoration: none; font-weight: 700; font-size: 18px; padding: 15px 30px; border-radius: 12px; border: 3px solid #231710; min-height: 54px; box-sizing: border-box; display: inline-flex; align-items: center; box-shadow: 5px 5px 0 #231710">See how it works</a>
       <a href="host.html" style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #C73A24; transform: rotate(-3deg); text-decoration-thickness: 2px">or host one &rarr;</a>
     </div>
     <p style="max-width: 600px; margin: 36px auto 0; text-align: center; font-size: clamp(20px, 2.3vw, 24px); line-height: 1.4">A weekly thing, mostly the same faces, food after. The friends part takes care of itself.</p>
@@ -141,11 +148,21 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
 
   </section>
 
+  <!-- HOW IT WORKS -->
+  <section id="how" style="max-width: 1160px; margin: 0 auto; padding: 8px 24px clamp(56px, 8vw, 96px)">
+    <div class="how3">
+      <div class="hstep"><span class="hn">1</span><h3>Pick your thing</h3><p>Choose an activity, a night and your area. We show you two or three games that fit, each run by a host.</p></div>
+      <div class="hstep"><span class="hn">2</span><h3>Show up weekly</h3><p>About eight people, same time, same place. Your spot is held, so come when you can. Seasons run six weeks, with a finale.</p></div>
+      <div class="hstep"><span class="hn">3</span><h3>Stay for food after</h3><p>Kopi, supper, a pint. It's where a group of familiar faces turns into friends.</p></div>
+    </div>
+    <p class="howfoot">Costs roughly your share of the court or table. No app needed in the room.</p>
+  </section>
+
   <!-- A NIGHT IN THE CITY: POLAROIDS -->
   <section id="night" style="max-width: 1160px; margin: 0 auto; padding: clamp(24px, 4vw, 48px) 24px clamp(64px, 9vw, 104px); display: flex; flex-direction: column; gap: 44px">
     <div style="display: flex; flex-direction: column; gap: 8px">
       <h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: clamp(34px, 5.2vw, 66px); line-height: 1.02">A Tuesday in <span id="night-city" style="color: #C73A24">Singapore</span>.</h2>
-      <p style="margin: 0; font-size: 21px; color: #6B5642">Same three stops, every week. Seasons run six weeks with a finale. Come when you can.</p>
+      <p style="margin: 0; font-size: 21px; color: #6B5642">Same three stops, every week.</p>
       <span id="hook" style="font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(28px, 3.6vw, 38px); line-height: 1.05; color: #C73A24"></span>
       <span id="when" style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #6B5642"></span>
       <span id="status" style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.12em; border: 2px solid #231710; border-radius: 999px; padding: 5px 14px; margin-top: 4px"></span>
@@ -193,105 +210,6 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
             </div>
           </div>
           <span style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px">Find a game</span>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
-          <div style="width: 312px; height: 675px; border: 8px solid #231710; border-radius: 40px; box-shadow: 8px 8px 0 #231710; overflow: hidden; box-sizing: content-box; background: #F3E6C8">
-            <div style="width: 390px; height: 844px; transform: scale(0.8); transform-origin: top left">
-              
-<div style="width: 390px; height: 844px; background: #F3E6C8; color: #231710; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden; position: relative">
-
-  <!-- header -->
-  <div style="padding: 22px 20px 0; display: flex; justify-content: space-between; align-items: center">
-    <span style="font-family: 'Alfa Slab One', serif; font-size: 26px">kakis</span>
-    <div aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #F2C14E; border: 2px solid #231710; display: flex; align-items: center; justify-content: center; font-family: 'Alfa Slab One', serif; font-size: 18px">J</div>
-  </div>
-
-  <div style="flex: 1 1 0; min-height: 0; padding: 20px 20px 0; display: flex; flex-direction: column; gap: 16px">
-    <span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #6B5642">NEXT STATION · TONIGHT</span>
-
-    <!-- sign card -->
-    <div style="background: #C73A24; border: 3px solid #231710; border-radius: 16px; box-shadow: 0 6px 0 #231710; padding: 8px">
-      <div style="border: 2px solid #F7D56B; border-radius: 10px; padding: 18px 18px 16px; display: flex; flex-direction: column; gap: 6px">
-        <span style="font-family: 'Alfa Slab One', serif; font-size: 15px; letter-spacing: 0.12em; color: #F7D56B">TUESDAY</span>
-        <span style="font-family: 'Alfa Slab One', serif; font-size: 46px; line-height: 1; color: #FFF6DC; text-shadow: 3px 3px 0 #231710">DOUBLES</span>
-        <span style="font-family: 'DM Mono', monospace; font-size: 13px; color: #FFF6DC"><span data-loc="venue">7:30 PM · The courts, 4 min from the MRT</span></span>
-        <!-- mini line -->
-        <div aria-hidden="true" style="display: flex; align-items: center; margin-top: 10px">
-          <div style="width: 14px; height: 14px; border-radius: 50%; background: #F7D56B; border: 2px solid #231710"></div>
-          <div style="flex: 1; height: 6px; background: #F7D56B"></div>
-          <div style="width: 14px; height: 14px; border-radius: 50%; background: #F7D56B; border: 2px solid #231710"></div>
-          <div style="flex: 1; height: 6px; background: #F7D56B"></div>
-          <div style="width: 14px; height: 14px; border-radius: 50%; background: #F7D56B; border: 2px solid #231710"></div>
-          <div style="flex: 1; height: 6px; background: #F7D56B"></div>
-          <div class="pulse" style="width: 20px; height: 20px; border-radius: 50%; background: #FFF6DC; border: 3px solid #231710"></div>
-          <div style="flex: 1; height: 6px; background: repeating-linear-gradient(90deg, #F7D56B 0 6px, transparent 6px 11px)"></div>
-          <div style="width: 14px; height: 14px; border-radius: 50%; border: 2px dashed #F7D56B"></div>
-          <div style="flex: 1; height: 6px; background: repeating-linear-gradient(90deg, #F7D56B 0 6px, transparent 6px 11px)"></div>
-          <div style="width: 14px; height: 14px; border-radius: 50%; border: 2px dashed #F7D56B"></div>
-        </div>
-        <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: #F7D56B">WEEK 4 OF 6 · SAME COURT, SAME TIME</span>
-      </div>
-    </div>
-
-    <!-- status -->
-    <div style="background: #FFF6DC; border: 3px solid #231710; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
-      <div style="display: flex; align-items: center; gap: 12px">
-        <div aria-hidden="true" style="width: 44px; height: 44px; border-radius: 50%; background: #2C6E5B; border: 2px solid #231710; display: flex; align-items: center; justify-content: center">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFF6DC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l5 5L20 6"></path></svg>
-        </div>
-        <div style="display: flex; flex-direction: column; line-height: 1.15">
-          <span style="font-family: 'Alfa Slab One', serif; font-size: 26px">You're in.</span>
-          <span style="font-size: 14px; color: #6B5642">Your usual spot's held. Can't come? Tap by Monday.</span>
-        </div>
-      </div>
-      <button type="button" style="min-height: 48px; border-radius: 999px; border: 2px solid #231710; background: transparent; color: #231710; font-weight: 700; font-size: 16px">Can't make this one</button>
-    </div>
-
-    <!-- who's coming -->
-    <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
-      <div aria-hidden="true" style="display: flex; padding-left: 10px">
-        <div style="width: 38px; height: 38px; margin-left: -10px; border-radius: 50%; background: #2C6E5B; color: #FFF6DC; border: 2px solid #F3E6C8; display: flex; align-items: center; justify-content: center; font-family: 'Alfa Slab One', serif; font-size: 15px">W</div>
-        <div style="width: 38px; height: 38px; margin-left: -10px; border-radius: 50%; background: #C73A24; color: #FFF6DC; border: 2px solid #F3E6C8; display: flex; align-items: center; justify-content: center; font-family: 'Alfa Slab One', serif; font-size: 15px">S</div>
-        <div style="width: 38px; height: 38px; margin-left: -10px; border-radius: 50%; background: #F2C14E; color: #231710; border: 2px solid #F3E6C8; display: flex; align-items: center; justify-content: center; font-family: 'Alfa Slab One', serif; font-size: 15px">P</div>
-        <div style="width: 38px; height: 38px; margin-left: -10px; border-radius: 50%; background: #2D5FA3; color: #FFF6DC; border: 2px solid #F3E6C8; display: flex; align-items: center; justify-content: center; font-family: 'Alfa Slab One', serif; font-size: 15px">B</div>
-        <div style="width: 38px; height: 38px; margin-left: -10px; border-radius: 50%; background: #E88CA5; color: #231710; border: 2px solid #F3E6C8; display: flex; align-items: center; justify-content: center; font-family: 'Alfa Slab One', serif; font-size: 15px">A</div>
-        <div style="width: 38px; height: 38px; margin-left: -10px; border-radius: 50%; background: #FFF6DC; color: #231710; border: 2px solid #231710; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 12px">+3</div>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.2"><span style="font-weight: 700; font-size: 16px">8 coming tonight</span><span style="font-size: 13px; color: #6B5642">6 from last week, 2 new faces</span></div>
-    </div>
-
-    <!-- after ticket -->
-    <div style="display: flex; background: #FFF6DC; border: 2px dashed #231710; border-radius: 12px; overflow: hidden">
-      <div style="background: #F2C14E; padding: 12px 14px; display: flex; align-items: center; border-right: 2px dashed #231710">
-        <span style="font-family: 'Alfa Slab One', serif; font-size: 15px; letter-spacing: 0.06em">AFTER</span>
-      </div>
-      <div style="padding: 12px 14px; display: flex; flex-direction: column; line-height: 1.2">
-        <span style="font-weight: 700; font-size: 16px"><span data-loc="after">Kopi at the hawker centre</span></span>
-        <span style="font-size: 13px; color: #6B5642">9:15 PM · phones stay in pockets</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- tab bar -->
-  <nav aria-label="App" style="height: 78px; border-top: 3px solid #231710; background: #FFF6DC; display: flex; margin-top: 16px">
-    <div style="flex: 1; background: #F2C14E; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #231710; font-weight: 700; font-size: 12px">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#231710" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-      Tonight
-    </div>
-    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #231710; font-weight: 700; font-size: 12px">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#231710" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M3 10h18"></path></svg>
-      Card
-    </div>
-    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #231710; font-weight: 700; font-size: 12px">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#231710" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4V3h6v1M9 11h6M9 15h4"></path></svg>
-      Host
-    </div>
-  </nav>
-</div>
-
-            </div>
-          </div>
-          <span style="font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px">Tonight</span>
         </div>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
           <div style="width: 312px; height: 675px; border: 8px solid #231710; border-radius: 40px; box-shadow: 8px 8px 0 #231710; overflow: hidden; box-sizing: content-box; background: #F3E6C8">
@@ -397,101 +315,16 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
   </section>
 
   <!-- HOSTS -->
-  <section id="hosts" style="max-width: 1160px; margin: 0 auto; padding: clamp(64px, 9vw, 112px) 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+  <section id="hosts" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px, 7vw, 88px) 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
     <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
       <span style="align-self: flex-start; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.12em; background: #E88CA5; border: 2px solid #231710; border-radius: 6px; padding: 4px 12px">FOR HOSTS</span>
-      <h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: clamp(38px, 6vw, 80px); line-height: 1.0">You welcome.<br><span style="color: #C73A24">We remember.</span></h2>
+      <h2 style="margin: 0; font-family: 'Alfa Slab One', serif; font-weight: 400; font-size: clamp(38px, 5.4vw, 72px); line-height: 1.0">You welcome.<br><span style="color: #C73A24">We remember.</span></h2>
       <p style="margin: 0; font-size: 21px; color: #6B5642">The app does the chasing. You do the hello.</p>
-      <p style="margin: 0; font-size: 19px">One season at a time, always with a co-host. We fill the court.</p>
+      <p style="margin: 0; font-size: 19px; max-width: 52ch">One season at a time, always with a co-host. We fill the court, handle bookings and payments, and remind people to come. You play free and get a cut of every night.</p>
       <a href="host.html" style="align-self: flex-start; background: #C73A24; color: #FFF6DC; text-decoration: none; font-weight: 700; font-size: 18px; padding: 14px 26px; border-radius: 12px; border: 3px solid #231710; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center; box-shadow: 5px 5px 0 #231710">Become a host &rarr;</a>
       
     </div>
-    <div style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center">
-      <div style="width: 312px; height: 675px; border: 8px solid #231710; border-radius: 40px; box-shadow: 8px 8px 0 #231710; overflow: hidden; box-sizing: content-box; background: #F3E6C8">
-        <div style="width: 390px; height: 844px; transform: scale(0.8); transform-origin: top left">
-          
-<div style="width: 390px; height: 844px; background: #F3E6C8; color: #231710; font-family: 'Figtree', system-ui, sans-serif; display: flex; flex-direction: column; overflow: hidden; position: relative">
-
-  <div style="padding: 22px 20px 0; display: flex; flex-direction: column; gap: 2px">
-    <span style="font-family: 'Alfa Slab One', serif; font-size: 32px">Briefing</span>
-    <span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: #6B5642">TUE 5:00 PM · TUESDAY DOUBLES</span>
-  </div>
-
-  <div style="flex: 1 1 0; min-height: 0; padding: 16px 20px 0; display: flex; flex-direction: column; gap: 12px">
-
-    <!-- headcount -->
-    <div style="background: #2C6E5B; color: #FFF6DC; border: 3px solid #231710; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px">
-      <div style="display: flex; justify-content: space-between; align-items: baseline">
-        <span style="font-family: 'Alfa Slab One', serif; font-size: 22px">8 in</span>
-        <span style="font-family: 'DM Mono', monospace; font-size: 12px">1 out · 1 off the waitlist · 2 courts</span>
-      </div>
-      <div style="font-family: 'DM Mono', monospace; font-size: 12px; color: #F7D56B">5 of 8 are regulars · 2 first-timers</div>
-      <div aria-hidden="true" style="display: flex; gap: 6px">
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; background: #F2C14E"></div>
-        <div style="flex: 1; height: 10px; border-radius: 5px; border: 2px dashed #F2C14E; box-sizing: border-box"></div>
-      </div>
-    </div>
-
-    <!-- new -->
-    <div style="background: #FFF6DC; border: 2px solid #231710; border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 12px">
-      <span style="background: #2C6E5B; color: #FFF6DC; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 6px">NEW</span>
-      <div style="line-height: 1.25"><div style="font-weight: 700; font-size: 17px">Aisha</div><div style="font-size: 14px; color: #6B5642">First time. Came with Sam.</div></div>
-    </div>
-
-    <!-- back -->
-    <div style="background: #FFF6DC; border: 2px solid #231710; border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; gap: 12px">
-      <span style="background: #2D5FA3; color: #FFF6DC; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 6px">BACK</span>
-      <div style="line-height: 1.25"><div style="font-weight: 700; font-size: 17px">Ben</div><div style="font-size: 14px; color: #6B5642">Back after two weeks. No catch-up needed.</div></div>
-    </div>
-
-    <!-- drifting -->
-    <div style="background: #FFF6DC; border: 2px solid #231710; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 10px">
-      <div style="display: flex; align-items: center; gap: 12px">
-        <span style="background: #C73A24; color: #FFF6DC; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 6px">DRIFTING</span>
-        <div style="line-height: 1.25"><div style="font-weight: 700; font-size: 17px">Priya</div><div style="font-size: 14px; color: #6B5642">Missed two in a row.</div></div>
-      </div>
-      <div style="background: #F7EBC0; border: 2px dashed #8F7C63; border-radius: 10px; padding: 10px 12px; font-family: 'Caveat', cursive; font-weight: 700; font-size: 23px; line-height: 1.1">Hey Priya, we missed you on Tuesday. Same time this week?</div>
-      <div style="display: flex; gap: 10px">
-        <button type="button" style="flex: 1; min-height: 44px; border-radius: 999px; border: 2px solid #231710; background: #F2C14E; color: #231710; font-weight: 700; font-size: 15px">Send as me</button>
-        <button type="button" style="flex: 1; min-height: 44px; border-radius: 999px; border: 2px solid #231710; background: transparent; color: #231710; font-weight: 700; font-size: 15px">Edit</button>
-      </div>
-    </div>
-
-    <!-- rotation -->
-    <div style="display: flex; flex-direction: column; gap: 4px; padding: 2px 2px 0">
-      <span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #6B5642">TONIGHT'S ROTATION</span>
-      <span style="font-size: 15px; font-weight: 600">Court 1: Sam + Aisha vs Wei + Ben</span>
-      <span style="font-size: 15px; font-weight: 600">Court 2: Priya + Jin vs Mei + Dan</span>
-    </div>
-  </div>
-
-  <nav aria-label="App" style="height: 78px; border-top: 3px solid #231710; background: #FFF6DC; display: flex; margin-top: 12px">
-    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #231710; font-weight: 700; font-size: 12px">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#231710" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-      Tonight
-    </div>
-    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #231710; font-weight: 700; font-size: 12px">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#231710" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M3 10h18"></path></svg>
-      Card
-    </div>
-    <div style="flex: 1; background: #F2C14E; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-decoration: none; color: #231710; font-weight: 700; font-size: 12px">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#231710" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"></rect><path d="M9 4V3h6v1M9 11h6M9 15h4"></path></svg>
-      Host
-    </div>
-  </nav>
-</div>
-
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
   <!-- FAQ -->
   <section id="faq" style="max-width: 1160px; margin: 0 auto; padding: 0 24px clamp(64px, 9vw, 104px); display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: flex-start">
@@ -500,7 +333,6 @@ html[data-city=bay] #sign-h1{letter-spacing:0.03em}
       <p style="margin: 0; font-size: 19px; color: #6B5642">Small, cheap, drop-in friendly, phones away. That’s the whole rulebook.</p>
     </div>
     <div style="flex: 2 1 480px; display: flex; flex-direction: column; gap: 12px">
-        <details class="faq"><summary>How do I get into a game?</summary><p>Tell us your thing, your nights and your area. We show two or three games that fit. Pick one, and it’s yours each week.</p></details>
         <details class="faq"><summary>Do I have to come every week?</summary><p>No. Your usual spot is held, and you tap “can’t make this one” when you’re out. A core of regulars forms on its own, and new people join any week.</p></details>
         <details class="faq"><summary>Can I come alone?</summary><p>Most people do. The host says hi, gets you into the first game, and introduces you around. Nobody has to break the ice from zero.</p></details>
         <details class="faq"><summary>Is it safe to come alone?</summary><p>Every host has an intro call and an ID check before their first game. Games happen in public places: courts, community halls, parks, hawker centres. There are women-led and women-only games, hosts can remove anyone, and you can flag anything privately.</p></details>

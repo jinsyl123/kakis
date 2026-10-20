@@ -53,6 +53,8 @@ img{max-width:100%;display:block}
 .hero h1{font-size:clamp(56px,8.4vw,128px);text-transform:none}
 .hero p{max-width:30ch;font-size:clamp(20px,2.1vw,24px);color:#2A365C;margin:28px 0 36px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.facts{list-style:none;margin:-14px 0 30px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.facts li{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;background:var(--navy);color:var(--tape);padding:5px 12px;border-radius:3px}
 .hero .btn-ghost{color:var(--navy)}
 .bib{position:relative;justify-self:center;width:min(100%,400px);aspect-ratio:4/3.4;background:#fff;color:var(--navy);border-radius:10px;transform:rotate(-5deg);box-shadow:14px 14px 0 var(--navy);display:flex;flex-direction:column;overflow:hidden}
 .bib .band{background:var(--track);color:#fff;font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.06em;text-align:center;padding:12px 0 10px}
@@ -173,6 +175,9 @@ footer a{color:var(--tape)}
       <div>
         <h1 class="display">Nobody here knows what they're doing yet.</h1>
         <p>Six weeks. A crew of beginners. One finish line at the end, and food after every session.</p>
+        <ul class="facts" aria-label="How a crew works">
+          <li>10 beginners</li><li>1 coach</li><li>6 weekly sessions</li><li>A real finale</li><li>Food after</li>
+        </ul>
         <div class="hero-ctas">
           <a class="btn btn-red" href="#join">Join a crew</a>
           <a class="btn btn-ghost" href="#challenges">See the challenges</a>
@@ -191,7 +196,7 @@ footer a{color:var(--tape)}
     <div class="wrap">
       <div class="sec-head">
         <h2 class="display">Pick a finish line.</h2>
-        <p>Every crew starts at zero and has a coach, ten people, one session a week and a real finale in week six.</p>
+        <p>Every crew starts at zero. Pick the finish line you want to cross with nine other beginners.</p>
       </div>
       <div class="startlist">
         <div class="row"><h3>Dragon boat</h3><div class="from"><b>Week 1</b>Can't hold the paddle right.</div><div class="to"><b>Week 6</b>Race day against other crews.</div><span class="after">Breakfast after</span></div>
@@ -264,7 +269,7 @@ footer a{color:var(--tape)}
         <div><h3>I've never done this. Is that okay?</h3><p>That's the only requirement. Every crew starts at zero, so nobody is the worst for long.</p></div>
         <div><h3>Can I come alone?</h3><p>Most people do. You can also sign up with a friend and join the same crew.</p></div>
         <div><h3>What if I miss a week?</h3><p>You get a short catch-up from the coach, and the crew saves your seat. Six weeks is short enough to stay with it.</p></div>
-        <div><h3>How much is it?</h3><p>One price for the six weeks, covering the coach and the venue. Food after is pay-your-own.</p></div>
+        <div><h3>How much is it?</h3><p>One price for all six weeks, covering the coach and the venue, about what a short course costs. Food after is pay-your-own.</p></div>
         <div><h3>What happens after the finale?</h3><p>Pick another challenge with your crew, or keep meeting weekly. Either way, you keep the people.</p></div>
         <div><h3>Who are the coaches?</h3><p>People who are good at the thing and patient with beginners. Every coach is vetted, and every session is in a public place.</p></div>
       </div>
